@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New User Form</title>
+  <style>
+    body {
+      background-image: url('user.jpg'); 
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Form container styling */
+    .form-container {
+      background-color: rgba(152, 197, 236, 0.9); 
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      width: 80%;
+      max-width: 320px; 
+      animation: fadeIn 0.6s ease-out; 
+    }
+
+    /* Header styling */
+    h2 {
+      font-size: 1.6em; 
+      color: #2d2d2d;
+      margin-bottom: 10px;
+      font-weight: 600;
+      text-align: center; 
+    }
+
+    /* Flexbox for form fields */
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 5px; 
+      margin-bottom: 15px; 
+    }
+
+    /* Label styling */
+    label {
+      font-size: 0.9em; 
+      color: #333;
+    }
+
+    /* Input styling */
+    input[type="text"],
+    input[type="password"],
+    input[type="date"] {
+      width: 90%;
+      padding: 8px;
+      border-radius: 6px;
+      border: 2px solid #ccc;
+      font-size: 0.9em;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Focus effect on inputs */
+    input[type="text"]:focus,
+    input[type="password"]:focus,
+    input[type="date"]:focus {
+      border-color: #00aaff;
+      box-shadow: 0 0 5px rgba(0, 170, 255, 0.5);
+      outline: none;
+    }
+
+    /* Submit button styling */
+    input[type="submit"] {
+      width: 40%;
+      padding: 10px;
+      margin-left: 90px;
+      margin-right: 85px;
+      background-color: #00aaff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    /* Submit button hover effect */
+    input[type="submit"]:hover {
+      background-color: #0077cc;
+      transform: translateY(-3px);
+    }
+
+    /* Submit button active effect */
+    input[type="submit"]:active {
+      background-color: #005fa3;
+      transform: translateY(2px);
+    }
+
+    /* Link styling */
+    a {
+      font-size: 0.9em;
+      color: #0077cc;
+      text-decoration: none;
+      margin-top: 10px;
+      display: inline-block;
+      text-align: center;
+      width: 100%;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #004a7c;
+    }
+
+    /* Fade-in effect for the form */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <form action="new_user_form.php" method="post" class="form-container">
+    <h2>Kindly Enter Your Credentials</h2>
+
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" name="password" id="password" required placeholder="Enter your password">
+    </div>
+
+    <div class="form-group">
+      <label for="emailid">E-mail ID:</label>
+      <input type="text" name="emailid" id="emailid" required placeholder="Enter your e-mail ID">
+    </div>
+
+    <div class="form-group">
+      <label for="mobileno">Mobile No.:</label>
+      <input type="text" name="mobileno" id="mobileno" required placeholder="Enter your mobile number">
+    </div>
+
+    <div class="form-group">
+      <label for="dob">Date of Birth:</label>
+      <input type="date" name="dob" id="dob" required>
+    </div>
+
+    <input type="submit" value="Save">
+
+    <br>
+    <a href="index.htm">Go Back to Home Page</a>
+  </form>
+
+</body>
+
+</html>
